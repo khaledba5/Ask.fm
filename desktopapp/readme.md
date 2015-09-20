@@ -1,0 +1,1 @@
+# For DeskTop Application using C# or CPP/QT #
