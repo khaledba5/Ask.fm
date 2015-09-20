@@ -26,18 +26,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><span>Ask.Fm</span></a>
+          {{ HTML::link("/","Ask.Fm",array("class"=> "navbar-brand")) }}
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active">
-              <a href="#">Home</a>
+               {{ HTML::link("/","Home") }}
             </li>
             <li>
-              <a href="#">Register</a>
+               {{ HTML::link("/register","Register") }}
             </li>
             <li>
-              <a href="#">Login</a>
+               {{ HTML::link("/login","Login") }}
             </li>
             <li>
               <form role="search" class="navbar-form navbar-left">
@@ -51,6 +51,20 @@
         </div>
       </div>
     </div>
+
+    @if(Session::has('message'))
+        <p id="message"></p>
+      <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="alert alert-danger alert-dismissable">
+              {{ Session::get('message') }}
+              </div>
+          </div>
+        </div>
+      </div>
+@endif
 
       @yield('content')
 
