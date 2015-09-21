@@ -11,7 +11,13 @@
 |
 */
 
+/*
 Route::get('/', function()
 {
 	return View::make('default');
 });
+*/
+
+
+Route::get('/', array('as'=>'home','uses'=>'questions@index'));
+

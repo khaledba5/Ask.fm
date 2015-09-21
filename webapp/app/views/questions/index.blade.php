@@ -1,5 +1,5 @@
 @extends('layouts.default')
 
 @section('content')
-{{ "Home Page"}}
+{{Home Page}}
 @stop
