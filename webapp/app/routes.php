@@ -20,4 +20,6 @@ Route::get('/', function()
 
 
 Route::get('/', array('as'=>'home','uses'=>'questions@index'));
+Route::get('register',array('as'=>'register','uses'=>'Users@neew'));
 
+Route::post('register',array('before'=>'csrf','uses'=>'Users@create'));
