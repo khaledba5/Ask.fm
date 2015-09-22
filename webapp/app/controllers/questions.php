@@ -1,6 +1,6 @@
 <?php
 
-class Questions_Controller extends BaseController{
+class questions extends BaseController{
 
 	public function index(){
 		return View::make('questions.index')
